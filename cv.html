@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreem Rijal | Curriculum Vitae</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Theme Initializer -->
+    <script>
+        const cachedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const activeTheme = cachedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', activeTheme);
+    </script>
+    
+    <style>
+        /* Specific CV Styles & Print Optimization overrides */
+        .cv-wrapper {
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .cv-paper {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 3.5rem;
+            width: 100%;
+            max-width: 850px;
+            box-shadow: var(--glow-shadow);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .cv-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .cv-header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .cv-profile-img {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--color-primary);
+            padding: 2px;
+            filter: grayscale(10%) contrast(102%);
+        }
+        
+        .cv-title-block h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+        
+        .cv-title-block .cv-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-primary);
+        }
+        
+        .cv-contact-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: flex-end;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+        
+        .cv-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cv-contact-item a {
+            transition: color var(--transition-fast);
+        }
+        
+        .cv-contact-item a:hover {
+            color: var(--text-primary);
+        }
+        
+        .cv-contact-item svg {
+            width: 13px;
+            height: 13px;
+            color: var(--color-primary);
+        }
+        
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 3rem;
+        }
+        
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+        
+        .cv-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cv-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .cv-summary {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cv-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .cv-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.3rem;
+        }
+        
+        .cv-item-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .cv-item-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+        
+        .cv-item-sub {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+        
+        .cv-item-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        .cv-bullets {
+            margin-top: 0.4rem;
+            padding-left: 1rem;
+        }
+        
+        .cv-bullets li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            list-style-type: disc;
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Sidebar skills section */
+        .cv-skills-group {
+            margin-bottom: 1rem;
+        }
+        
+        .cv-skills-group h3 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted-dark);
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+        
+        .cv-skills-list {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        /* Floating control buttons */
+        .cv-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 2000;
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        /* Buttons styling */
+        .back-btn {
+            background-color: var(--bg-surface-glass);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .back-btn:hover {
+            border-color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+        
+        /* Print Stylesheet Overrides */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                background-image: none !important;
+                color: #1a1a1a !important;
+                font-size: 10pt;
+                line-height: 1.4;
+            }
+            
+            .bg-grain, #particleCanvas, .cv-controls, .no-print, header, footer {
+                display: none !important;
+            }
+            
+            .cv-wrapper {
+                padding: 0 !important;
+                min-height: auto !important;
+                display: block !important;
+            }
+            
+            .cv-paper {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                background-color: transparent !important;
+                color: #1a1a1a !important;
+            }
+            
+            .cv-profile-img {
+                width: 68px !important;
+                height: 68px !important;
+                border: 1px solid #1a1a1a !important;
+                filter: grayscale(100%) !important;
+            }
+            
+            .cv-title-block h1 {
+                font-size: 22pt !important;
+                color: #000000 !important;
+            }
+            
+            .cv-title-block .cv-subtitle {
+                font-size: 9pt !important;
+                color: #333333 !important;
+            }
+            
+            .cv-contact-block {
+                font-size: 8pt !important;
+                color: #333333 !important;
+            }
+            
+            .cv-section h2 {
+                font-size: 12pt !important;
+                border-bottom: 1.2px solid #333333 !important;
+                margin-bottom: 0.6rem !important;
+                color: #000000 !important;
+            }
+            
+            .cv-grid {
+                grid-template-columns: 1.3fr 0.7fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .cv-item {
+                margin-bottom: 1rem !important;
+            }
+            
+            .cv-item-title {
+                font-size: 9pt !important;
+                color: #000000 !important;
+            }
+            
+            .cv-item-meta {
+                font-size: 7.5pt !important;
+                color: #333333 !important;
+            }
+            
+            .cv-item-sub {
+                font-size: 8pt !important;
+                color: #333333 !important;
+            }
+            
+            .cv-item-desc, .cv-bullets li, .cv-skills-list, .cv-summary {
+                font-size: 8.2pt !important;
+                color: #333333 !important;
+            }
+            
+            .cv-skills-group h3 {
+                font-size: 7.5pt !important;
+                color: #333333 !important;
+            }
+            
+            a {
+                color: #000000 !important;
+                text-decoration: none !important;
+            }
+        }
+        
+        /* Mobile Layout Tweaks for Web View */
+        @media (max-width: 768px) {
+            .cv-paper {
+                padding: 1.75rem;
+                border-radius: 0;
+                border: none;
+            }
+            .cv-header-row {
+                flex-direction: column;
+                gap: 1.25rem;
+                align-items: flex-start;
+            }
+            .cv-header-left {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .cv-contact-block {
+                align-items: flex-start;
+                text-align: left;
+            }
+            .cv-grid {
+                grid-template-columns: 1fr;
+                gap: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background overlay and drifting mesh canvas -->
+    <div class="bg-grain"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Controls Menu (Floating) -->
+    <div class="cv-controls no-print">
+        <a href="index.html" class="back-btn" title="Return to portfolio website">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Portfolio</span>
+        </a>
+        <button onclick="window.print()" class="back-btn" style="background-color: var(--color-primary); border-color: var(--color-primary); color: var(--bg-main);" title="Download or save CV as a PDF file">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CV (PDF)</span>
+        </button>
+    </div>
+
+    <!-- CV Document Paper -->
+    <div class="cv-wrapper">
+        <article class="cv-paper">
+            
+            <!-- CV Header -->
+            <header class="cv-header-row">
+                <div class="cv-header-left">
+                    <img src="supreem.jpg" alt="Supreem Rijal" class="cv-profile-img">
+                    <div class="cv-title-block">
+                        <h1>Supreem Rijal</h1>
+                        <div class="cv-subtitle">Developer & BCA Student</div>
+                    </div>
+                </div>
+                
+                <div class="cv-contact-block">
+                    <div class="cv-contact-item">
+                        <a href="mailto:rijalsupreem222@gmail.com">rijalsupreem222@gmail.com</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span>+977 9742545447</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span>Kirtipur-4, Kathmandu, Nepal</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 3a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="cv-contact-item">
+                        <a href="https://github.com/supreem121" target="_blank" rel="noopener noreferrer">github.com/supreem121</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </div>
+                    <div class="cv-contact-item">
+                        <a href="https://www.linkedin.com/in/supreem-rijal-742281314" target="_blank" rel="noopener noreferrer">linkedin.com/in/supreem-rijal-742281314</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- CV Content Grid -->
+            <div class="cv-grid">
+                
+                <!-- Left Column: Summary, Projects, Experience -->
+                <div class="cv-left-col">
+                    
+                    <!-- Summary -->
+                    <section class="cv-section">
+                        <h2>Profile</h2>
+                        <p class="cv-summary">
+                            Detail-oriented programmer and Bachelor of Computer Applications (BCA) student at Prime College. Experienced in constructing lightweight web platforms, custom database schemas, and persistent desktop automation utilities. Focused on clean script logic, intuitive interfaces, and practical software design.
+                        </p>
+                    </section>
+                    
+                    <!-- Key Projects -->
+                    <section class="cv-section">
+                        <h2>Featured Projects</h2>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">CLOUDE GO</span>
+                                <span class="cv-item-meta">Go, APIs, CLI</span>
+                            </div>
+                            <p class="cv-item-desc">
+                                Engineered a concurrent system metrics monitor in Go. Reads system statistics, logs process data, and serves real-time analytics through a lightweight local API endpoint.
+                            </p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">FurniShop</span>
+                                <span class="cv-item-meta">PHP, MySQL, JS</span>
+                            </div>
+                            <p class="cv-item-desc">
+                                Created an academic e-commerce web dashboard. Implemented SQL schema designs, user registration/session verification rules, search sorting, and inventory management controls.
+                            </p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">Stopwatch & Timer App</span>
+                                <span class="cv-item-meta">JavaScript, CSS3</span>
+                            </div>
+                            <p class="cv-item-desc">
+                                Programmed a distraction-free client-side timer utility. Integrates split lap diagnostics, state caching via Web Storage, and custom keyboard shortcut controls.
+                            </p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">SR Sellers Catalog</span>
+                                <span class="cv-item-meta">PHP, MySQL, HTML</span>
+                            </div>
+                            <p class="cv-item-desc">
+                                Developed an online inventory display catalog for local hardware suppliers. Handled item databases, dynamic search filtering, and responsive container rendering.
+                            </p>
+                        </div>
+                    </section>
+                    
+                    <!-- Work Experience -->
+                    <section class="cv-section">
+                        <h2>Work Experience</h2>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">Data Entry Operator</span>
+                                <span class="cv-item-meta">2023</span>
+                            </div>
+                            <div class="cv-item-sub">Progressin Pvt. Ltd. | Kathmandu, Nepal</div>
+                            <ul class="cv-bullets">
+                                <li>Logged product inventory details into digital content management platforms.</li>
+                                <li>Organized structural inputs and maintained database record layouts.</li>
+                                <li>Collaborated with inventory managers to verify correct pricing and listing descriptions.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+                
+                <!-- Right Column: Education, Skills, Activities -->
+                <div class="cv-right-col">
+                    
+                    <!-- Education -->
+                    <section class="cv-section">
+                        <h2>Education</h2>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">BCA (Bachelor of Computer Applications)</span>
+                                <span class="cv-item-meta">2023 - Present</span>
+                            </div>
+                            <div class="cv-item-sub">Prime College, Tribhuvan University</div>
+                            <p class="cv-item-desc">Current 5th Semester student. Enrolled in OOP in Java, DBMS, System Analysis & Design (SAD), DSA, and Software Engineering.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">High School (+2 Science)</span>
+                                <span class="cv-item-meta">2021 - 2023</span>
+                            </div>
+                            <div class="cv-item-sub">DAV College | GPA: 2.85</div>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">SEE / Secondary Schooling</span>
+                                <span class="cv-item-meta">2020</span>
+                            </div>
+                            <div class="cv-item-sub">Green Village Education Foundation | GPA: 3.55</div>
+                        </div>
+                    </section>
+                    
+                    <!-- Technical Skills -->
+                    <section class="cv-section">
+                        <h2>Technical Skills</h2>
+                        
+                        <div class="cv-skills-group">
+                            <h3>Languages</h3>
+                            <div class="cv-skills-list">Go, PHP, Python, Java, C, SQL, JavaScript (ES6+), HTML5, CSS3</div>
+                        </div>
+                        
+                        <div class="cv-skills-group">
+                            <h3>Databases & Servers</h3>
+                            <div class="cv-skills-list">MySQL, Relational Database Normalization, XAMPP, Local Web Servers</div>
+                        </div>
+                        
+                        <div class="cv-skills-group">
+                            <h3>Tools & Systems</h3>
+                            <div class="cv-skills-list">Git, GitHub, VS Code, Linux Command Line, Windows local environments</div>
+                        </div>
+                        
+                        <div class="cv-skills-group">
+                            <h3>Desktop GUI</h3>
+                            <div class="cv-skills-list">Tkinter library, file read/write serialization, event loops</div>
+                        </div>
+                    </section>
+                    
+                    <!-- Certifications & Extras -->
+                    <section class="cv-section">
+                        <h2>Certificates & Clubs</h2>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">Women in IT Program</span>
+                                <span class="cv-item-meta">2024</span>
+                            </div>
+                            <div class="cv-item-sub">Prime IT Club</div>
+                            <p class="cv-item-desc">Served as a technical support representative, coordinating technical equipment setups and assisting workshop participants during coding sessions.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <span class="cv-item-title">Languages</span>
+                                <span class="cv-item-meta">Fluency</span>
+                            </div>
+                            <p class="cv-item-desc">Nepali (Native), English (Professional Working proficiency)</p>
+                        </div>
+                    </section>
+
+                </div>
+                
+            </div>
+        </article>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
