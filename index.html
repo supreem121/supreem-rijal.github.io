@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supreem Rijal | Full-Stack Web Developer & BCA Student</title>
+    <title>Supreem Rijal | Developer & BCA Student</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Supreem Rijal, a passionate BCA 5th Semester student and aspiring Full-Stack Web Developer from Nepal. Experienced in HTML, CSS, JavaScript, PHP, MySQL, and Python.">
-    <meta name="keywords" content="Supreem Rijal, Portfolio, Web Developer, Full-Stack Developer, BCA Student, Nepal, Python Tkinter, PHP MySQL Developer">
+    <meta name="description" content="Portfolio of Supreem Rijal, a developer and BCA student from Nepal. Experienced in PHP, MySQL, Python, Go, and modern frontend development.">
+    <meta name="keywords" content="Supreem Rijal, Portfolio, Web Developer, Go, PHP, Python, BCA Student, Nepal">
     <meta name="author" content="Supreem Rijal">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Supreem Rijal | Full-Stack Web Developer & BCA Student">
-    <meta property="og:description" content="Portfolio of Supreem Rijal. Explore his web development projects, desktop tools, and academic achievements.">
-    <meta property="og:image" content="profile.jpg"> <!-- Fallback placeholder -->
+    <meta property="og:title" content="Supreem Rijal | Developer Portfolio">
+    <meta property="og:description" content="Explore web applications, desktop tools, and academic projects built by Supreem Rijal.">
+    <meta property="og:image" content="supreem.jpg">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Cormorant Garamond for headings, Plus Jakarta Sans for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Interactive Particle Background Canvas -->
+    <!-- Subtle Grain Overlay and Ambient Mesh Canvas -->
+    <div class="bg-grain"></div>
     <canvas id="particleCanvas"></canvas>
 
     <!-- Header Navigation -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-bracket">SR</span><span class="logo-dot">.
+                <span class="logo-bracket">Supreem</span><span class="logo-dot">.</span>
             </a>
             
             <nav class="nav-menu" id="navMenu">
@@ -47,19 +48,19 @@
 
             <div class="nav-actions">
                 <!-- Theme Toggle Button -->
-                <button id="themeToggle" class="theme-btn" aria-label="Toggle visual theme">
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
                 
                 <!-- Resume Download Button -->
-                <a href="#" class="btn btn-secondary resume-btn" id="downloadResume">
-                    <span>Resume</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <a href="cv.html" target="_blank" class="btn btn-secondary resume-btn">
+                    <span>CV</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 </a>
 
                 <!-- Mobile Menu Hamburger -->
-                <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -73,29 +74,29 @@
         <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge-glow animate-fade-in">Ready to Build & Solve</div>
+                    <div class="badge-glow animate-fade-in">Currently coding in Nepal</div>
                     <h1 class="hero-title animate-slide-up">
-                        Hi, I'm <span class="highlight">Supreem Rijal</span>
+                        Building software with <span class="highlight">focus and craft.</span>
                     </h1>
                     
                     <div class="typewriter-container">
-                        <span class="prefix">Aspiring</span>
+                        <span class="prefix">I focus on</span>
                         <span class="typewriter-text" id="typewriter"></span>
-                        <span class="cursor">|</span>
+                        <span class="cursor">_</span>
                     </div>
 
                     <p class="hero-tagline animate-fade-in">
-                        Building modern web applications, solving real-world problems through code, and continuously learning new technologies to become a skilled Full-Stack Developer.
+                        Hi, I'm Supreem. I build web applications and desktop tools. Currently studying Computer Applications in Nepal, focusing on writing clean code and understanding how systems work under the hood.
                     </p>
 
                     <div class="hero-buttons animate-slide-up">
                         <a href="#projects" class="btn btn-primary">
-                            <span>View Projects</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <span>Browse Projects</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                         <a href="#contact" class="btn btn-secondary">
-                            <span>Contact Me</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>Get in Touch</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </a>
                     </div>
 
@@ -117,29 +118,17 @@
                 </div>
 
                 <div class="hero-image-wrapper animate-fade-in">
-                    <!-- Tech Floating Circles -->
-                    <div class="tech-float tech-html" title="HTML5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.582 10.051-.002.228-2.5-12.791.002.683 7.632h9.117l-.286 3.036-2.599.71-2.615-.712-.166-1.898H7.502l.317 3.662 4.171 1.15 4.157-1.15.539-5.946H8.531z"/></svg></div>
-                    <div class="tech-float tech-css" title="CSS3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.582 10.051-.002.228-2.5-12.791.002.683 7.632h9.117l-.286 3.036-2.599.71-2.615-.712-.166-1.898H7.502l.317 3.662 4.171 1.15 4.157-1.15.539-5.946H8.531z" style="fill:#3b82f6;"/></svg></div>
-                    <div class="tech-float tech-js" title="JavaScript"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.5c-.007-1.442-.708-2.241-2.107-2.241-.343 0-.649.047-.9.141-.105-.19-.176-.44-.176-.713V9.82H22V7h-5.25v2.82h1.5v6.52c0 .888-.316 1.341-1.077 1.341-.225 0-.488-.047-.788-.141l-.326 2.502c.421.2.998.318 1.631.318 2.05-.002 4.344-.962 4.344-3.86zM8.384 15.65c-.09-.59-.571-.97-1.282-.97-.671 0-1.142.36-1.282.97h2.564zm-3.844.2c.11 1.39 1.192 2.3 2.763 2.3 1.161 0 1.952-.45 2.452-1.18l2.132 1.32C11 19.82 9.4 20.82 7.218 20.82 3.965 20.82 1.7 18.72 1.7 15.35c0-3.3 2.215-5.5 5.378-5.5 3.323 0 5.257 2.26 5.257 5.5v.5H4.54z"/></svg></div>
-                    <div class="tech-float tech-python" title="Python"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.916 0C5.556 0 5.86 2.756 5.86 2.756v2.544h6.147v.883H3.454S0 5.894 0 12.186c0 6.29 3.037 6.069 3.037 6.069h1.812v-2.545c0-2.756 2.368-2.617 2.368-2.617h6.126s2.546.069 2.546-2.544V4.469S16.035 0 11.916 0zm-3.14 1.758a.965.965 0 1 1 0 1.93.965.965 0 0 1 0-1.93zm6.31 4.54v2.544c0 2.756-2.368 2.618-2.368 2.618H6.592s-2.546-.07-2.546 2.544v6.082S3.965 24 8.084 24c6.36 0 6.056-2.756 6.056-2.756v-2.544H7.993v-.883h8.553S20 18.106 20 11.814c0-6.29-3.037-6.07-3.037-6.07H15.15v2.546c0 2.756-2.367 2.617-2.367 2.617H6.657v-2.546c0-2.756 2.368-2.617 2.368-2.617h3.14zM14.94 20.31a.965.965 0 1 1 0 1.93.965.965 0 0 1 0-1.93z"/></svg></div>
-                    
-                    <!-- Portrait Visual Shell -->
+                    <!-- Clean, Minimal Portrait Frame -->
                     <div class="photo-glow-border">
                         <div class="portrait-container">
-
-                            <img src="supreem.jpg" 
-                                 alt="Supreem Rijal Profile Portrait" 
-                                 id="profilePhoto"
-                                 class="profile-img placeholder-glow">
-                                 
-                            
+                            <img src="supreem.jpg" alt="Supreem Rijal" id="profilePhoto" class="profile-img">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="scroll-indicator">
-                <a href="#about" aria-label="Scroll down to About section">
+                <a href="#about" aria-label="Scroll to About">
                     <span class="mouse">
                         <span class="wheel"></span>
                     </span>
@@ -148,57 +137,51 @@
             </div>
         </section>
 
-        <!-- About Me Section (Terminal Theme) -->
+        <!-- About Me Section -->
         <section id="about" class="about-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">know_me</span>
+                    <span class="subtitle">overview</span>
                     <h2 class="section-title">About Me</h2>
                     <div class="title-underline"></div>
                 </div>
 
                 <div class="about-grid">
-                    <!-- Code Terminal View -->
+                    <!-- Python Terminal Mockup -->
                     <div class="terminal-card">
                         <div class="terminal-header">
                             <span class="terminal-dot red"></span>
                             <span class="terminal-dot yellow"></span>
                             <span class="terminal-dot green"></span>
-                            <span class="terminal-title">developer_profile.py</span>
+                            <span class="terminal-title">supreem.py</span>
                         </div>
                         <div class="terminal-body font-mono">
                             <span class="line-num">1</span><span class="token keyword">class</span> <span class="token class-name">SupreemRijal</span>:<span class="line-break"></span>
                             <span class="line-num">2</span>    <span class="token keyword">def</span> <span class="token function">__init__</span>(<span class="token self">self</span>):<span class="line-break"></span>
-                            <span class="line-num">3</span>        <span class="token self">self</span>.name = <span class="token string">"Supreem Rijal"</span><span class="line-break"></span>
-                            <span class="line-num">4</span>        <span class="token self">self</span>.role = <span class="token string">"Full-Stack Web Developer"</span><span class="line-break"></span>
-                            <span class="line-num">5</span>        <span class="token self">self</span>.academic_status = <span class="token string">"BCA 5th Semester Student"</span><span class="line-break"></span>
-                            <span class="line-num">6</span>        <span class="token self">self</span>.location = <span class="token string">"Nepal"</span><span class="line-break"></span>
-                            <span class="line-num">7</span>        <span class="token self">self</span>.passion = [<span class="token string">"Software Development"</span>, <span class="token string">"Problem Solving"</span>]<span class="line-break"></span>
-                            <span class="line-num">8</span><span class="line-break"></span>
-                            <span class="line-num">9</span>    <span class="token keyword">def</span> <span class="token function">get_objective</span>(<span class="token self">self</span>):<span class="line-break"></span>
-                            <span class="line-num">10</span>        <span class="token keyword">return</span> ( 
-                            <span class="line-num">11</span>            <span class="token string">"To become a professional Full-Stack Web Developer "</span><span class="line-break"></span>
-                            <span class="line-num">12</span>            <span class="token string">"by continuously learning modern technologies, building "</span><span class="line-break"></span>
-                            <span class="line-num">13</span>            <span class="token string">"practical software solutions, and contributing to "</span><span class="line-break"></span>
-                            <span class="line-num">14</span>            <span class="token string">"innovative projects that solve real-world problems."</span><span class="line-break"></span>
-                            <span class="line-num">15</span>        )<span class="line-break"></span>
-                            <span class="line-num">16</span><span class="line-break"></span>
-                            <span class="line-num">17</span>developer = SupreemRijal()<span class="line-break"></span>
-                            <span class="line-num">18</span><span class="token keyword">print</span>(developer.get_objective())
+                            <span class="line-num">3</span>        <span class="token self">self</span>.role = <span class="token string">"Developer & Student"</span><span class="line-break"></span>
+                            <span class="line-num">4</span>        <span class="token self">self</span>.location = <span class="token string">"Nepal"</span><span class="line-break"></span>
+                            <span class="line-num">5</span>        <span class="token self">self</span>.studies = <span class="token string">"BCA 5th Semester"</span><span class="line-break"></span>
+                            <span class="line-num">6</span>        <span class="token self">self</span>.stack = [<span class="token string">"Web"</span>, <span class="token string">"Go"</span>, <span class="token string">"PHP"</span>, <span class="token string">"Python"</span>]<span class="line-break"></span>
+                            <span class="line-num">7</span><span class="line-break"></span>
+                            <span class="line-num">8</span>    <span class="token keyword">def</span> <span class="token function">get_philosophy</span>(<span class="token self">self</span>):<span class="line-break"></span>
+                            <span class="line-num">9</span>        <span class="token keyword">return</span> <span class="token string">"Build practical tools, write clear code, keep learning."</span><span class="line-break"></span>
+                            <span class="line-num">10</span><span class="line-break"></span>
+                            <span class="line-num">11</span>dev = SupreemRijal()<span class="line-break"></span>
+                            <span class="line-num">12</span>print(dev.get_philosophy())
                         </div>
                     </div>
 
-                    <!-- Professional Summary -->
+                    <!-- Honest, Human Copywriting -->
                     <div class="about-info">
-                        <h3>Passionate about combining Creativity with Code</h3>
+                        <h3>Coding with purpose and curiosity.</h3>
                         <p class="summary-lead">
-                            Hello! I'm Supreem Rijal, a BCA 5th Semester student passionate about software development, web technologies, and problem-solving.
+                            I am a student developer who enjoys building software that solves day-to-day problems.
                         </p>
                         <p class="summary-text">
-                            I enjoy building real-world projects that combine creativity with technology. My experience includes frontend design, backend database integration, and desktop applications using Python.
+                            My coding journey started with automation scripts and desktop tools using Python. That curiosity quickly led me to explore web application development, relational databases, and backend APIs.
                         </p>
                         <p class="summary-text">
-                            I continuously improve my skills through academic projects, personal creations, and practical development tasks. My eventual goal is to become an industry-ready professional Full-Stack Developer capable of engineering scalable, user-friendly, and impactful software solutions.
+                            Currently in my fifth semester of a Bachelor of Computer Applications (BCA) program, I divide my time between academic system concepts and real-world implementation projects using Go, PHP, and JavaScript. I focus on keeping my code organized, my interfaces intuitive, and my solutions practical.
                         </p>
                         
                         <div class="bio-details">
@@ -207,16 +190,16 @@
                                 <span class="bio-val">Nepal</span>
                             </div>
                             <div class="bio-item">
-                                <span class="bio-label">Academic</span>
-                                <span class="bio-val">BCA 5th Semester</span>
+                                <span class="bio-label">Education</span>
+                                <span class="bio-val">BCA Student (5th Sem)</span>
                             </div>
                             <div class="bio-item">
-                                <span class="bio-label">Primary Interest</span>
-                                <span class="bio-val">Full-Stack Web Dev</span>
+                                <span class="bio-label">Main Interests</span>
+                                <span class="bio-val">Web Dev & Systems</span>
                             </div>
                             <div class="bio-item">
-                                <span class="bio-label">Desktop Apps</span>
-                                <span class="bio-val">Python & Tkinter</span>
+                                <span class="bio-label">Languages</span>
+                                <span class="bio-val">PHP, Go, Python, JS</span>
                             </div>
                         </div>
                     </div>
@@ -238,9 +221,9 @@
                     <div class="skills-tab active" data-target="frontend">Frontend</div>
                     <div class="skills-tab" data-target="backend">Backend & DB</div>
                     <div class="skills-tab" data-target="programming">Languages</div>
-                    <div class="skills-tab" data-target="python">Python/Desktop</div>
+                    <div class="skills-tab" data-target="python">Python & GUI</div>
                     <div class="skills-tab" data-target="cs">CS Concepts</div>
-                    <div class="skills-tab" data-target="tools">Tools & Platforms</div>
+                    <div class="skills-tab" data-target="tools">Tools & Tech</div>
                 </div>
 
                 <!-- Skills Display Content panels -->
@@ -257,31 +240,24 @@
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">CSS3 / Flexbox / Grid</span>
+                                    <span class="skill-name">CSS3 / Layouts</span>
                                     <span class="skill-percentage">90%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="90%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">JavaScript (ES6+) & DOM</span>
+                                    <span class="skill-name">JavaScript (ES6+)</span>
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">Responsive Web Design</span>
+                                    <span class="skill-name">Responsive Design</span>
                                     <span class="skill-percentage">95%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="95%"></div></div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">Bootstrap CSS</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
                             </div>
                         </div>
                     </div>
@@ -291,35 +267,28 @@
                         <div class="skills-grid">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-name">PHP Backend</span>
                                     <span class="skill-percentage">80%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">MySQL Database</span>
+                                    <span class="skill-name">Go APIs</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="75%"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <span class="skill-name">MySQL / Relational Databases</span>
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">CRUD Operations</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="90%"></div></div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">Session Management</span>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">Database Integration & Design</span>
+                                    <span class="skill-name">Database Integration</span>
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
@@ -346,17 +315,17 @@
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
+                                    <span class="skill-name">Go Language</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="75%"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
                                     <span class="skill-name">C Programming</span>
                                     <span class="skill-percentage">70%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="70%"></div></div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">PHP / JavaScript</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
                             </div>
                         </div>
                     </div>
@@ -373,17 +342,17 @@
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">File Handling & Data Persistence</span>
+                                    <span class="skill-name">File Handling & Storage</span>
                                     <span class="skill-percentage">80%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">Desktop Tools Engineering</span>
-                                    <span class="skill-percentage">75%</span>
+                                    <span class="skill-name">Desktop Utilities</span>
+                                    <span class="skill-percentage">80%</span>
                                 </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="75%"></div></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
                             </div>
                         </div>
                     </div>
@@ -407,21 +376,14 @@
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">Database Management Systems (DBMS)</span>
+                                    <span class="skill-name">Database Systems (DBMS)</span>
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
                             </div>
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <span class="skill-name">System Analysis & Design (SAD)</span>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">SDLC & Software Engineering</span>
+                                    <span class="skill-name">Software Engineering Methods</span>
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
@@ -435,11 +397,9 @@
                             <div class="skill-badge"><span class="badge-dot"></span>Git</div>
                             <div class="skill-badge"><span class="badge-dot"></span>GitHub</div>
                             <div class="skill-badge"><span class="badge-dot"></span>VS Code</div>
-                            <div class="skill-badge"><span class="badge-dot"></span>XAMPP Stack</div>
+                            <div class="skill-badge"><span class="badge-dot"></span>XAMPP / PHP Server</div>
                             <div class="skill-badge"><span class="badge-dot"></span>GitHub Pages</div>
-                            <div class="skill-badge"><span class="badge-dot"></span>Cloudflare DNS</div>
-                            <div class="skill-badge"><span class="badge-dot"></span>SQL Command Line</div>
-                            <div class="skill-badge"><span class="badge-dot"></span>Local Windows Environment</div>
+                            <div class="skill-badge"><span class="badge-dot"></span>Linux Terminal</div>
                         </div>
                     </div>
                 </div>
@@ -451,204 +411,153 @@
             <div class="container">
                 <div class="section-header">
                     <span class="subtitle">my_builds</span>
-                    <h2 class="section-title">Featured Projects</h2>
+                    <h2 class="section-title">Projects</h2>
                     <div class="title-underline"></div>
                 </div>
 
                 <!-- Projects Category Filters -->
                 <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="fullstack">PHP & MySQL</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fullstack">PHP & Databases</button>
                     <button class="filter-btn" data-filter="frontend">JavaScript / Web</button>
-                    <button class="filter-btn" data-filter="desktop">Python / GUI</button>
+                    <button class="filter-btn" data-filter="desktop">Python / Systems</button>
                 </div>
 
                 <!-- Projects Grid -->
                 <div class="projects-grid" id="projectsGrid">
-                    <!-- Project 1: FurniShop -->
+                    <!-- Project 1: CLOUDE GO -->
+                    <article class="project-card" data-category="desktop">
+                        <div class="project-meta">
+                            <span class="project-tag">Go / CLI Utility</span>
+                        </div>
+                        <h3 class="project-title">CLOUDE GO</h3>
+                        <p class="project-desc">A concurrent cloud telemetry and system performance dashboard built in Go. Monitors local system processes and serves statistics through a lightweight local API.</p>
+                        <div class="project-features">
+                            <span>⚡ High-performance concurrency</span>
+                            <span>📊 Local server API reporting</span>
+                            <span>⚙️ Interactive terminal interface</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>Go</span><span>Concurrency</span><span>APIs</span><span>CLI</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: FurniShop -->
                     <article class="project-card" data-category="fullstack">
                         <div class="project-meta">
-                            <span class="project-tag">Major Academic Project</span>
+                            <span class="project-tag">BCA Academic Project</span>
                         </div>
-                        <h3 class="project-title">FurniShop – Furniture Shopping</h3>
-                        <p class="project-desc">A major online portal for furniture cataloging, stock handling, and user transaction management.</p>
+                        <h3 class="project-title">FurniShop Portal</h3>
+                        <p class="project-desc">An academic online storefront project for furniture listings. Implements user session authentication, basic checkout logic, and a dynamic admin management dashboard.</p>
                         <div class="project-features">
-                            <span>🛒 Shopping Cart & Authentication</span>
-                            <span>📦 Stock & Admin Management</span>
-                            <span>🔍 Category Filters & Search</span>
+                            <span>🛒 Shopping cart structure</span>
+                            <span>🔑 Secured user login sessions</span>
+                            <span>📂 MySQL relational structure</span>
                         </div>
                         <div class="project-tech">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+                            <span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                         </div>
                     </article>
 
-                    <!-- Project 2: SR Sellers -->
+                    <!-- Project 3: Stopwatch & Timer App -->
+                    <article class="project-card" data-category="frontend">
+                        <div class="project-meta">
+                            <span class="project-tag">Web Application</span>
+                        </div>
+                        <h3 class="project-title">Stopwatch & Timer App</h3>
+                        <p class="project-desc">A clean, distraction-free browser productivity application. Supports precise split lap timing, counting down, customizable interval configurations, and local storage state persistence.</p>
+                        <div class="project-features">
+                            <span>⏱️ Accurate lap/split intervals</span>
+                            <span>💾 Settings local storage caching</span>
+                            <span>🌗 Accessible layout interface</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>HTML5</span><span>CSS3</span><span>Vanilla JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: SR Sellers -->
                     <article class="project-card" data-category="fullstack">
                         <div class="project-meta">
-                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Client Project</span>
                         </div>
-                        <h3 class="project-title">SR Sellers E-Commerce</h3>
-                        <p class="project-desc">A business-oriented digital catalog tailored for displaying hardware inventories and e-commerce listings.</p>
+                        <h3 class="project-title">SR Sellers Catalog</h3>
+                        <p class="project-desc">A custom e-commerce product catalog designed for local hardware merchants. Optimized for fast catalog indexing and simple management views.</p>
                         <div class="project-features">
-                            <span>📂 Item Catalog Management</span>
-                            <span>⚡ Fluid Product Showcase</span>
-                            <span>📱 Highly Responsive Grid Layout</span>
+                            <span>📂 Inventory organization database</span>
+                            <span>📱 Clean mobile showcase view</span>
+                            <span>⚡ Fast query load times</span>
                         </div>
                         <div class="project-tech">
-                            <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>MySQL</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: Portfolio Website -->
-                    <article class="project-card" data-category="frontend">
-                        <div class="project-meta">
-                            <span class="project-tag">Personal Portfolio</span>
-                        </div>
-                        <h3 class="project-title">Developer Portfolio</h3>
-                        <p class="project-desc">A recruiter-level custom portfolio optimized for display, performance, animations, and detailed developer bios.</p>
-                        <div class="project-features">
-                            <span>🌗 Dark / Light Seamless Engine</span>
-                            <span>📈 Live GitHub Dashboard Visuals</span>
-                            <span>✨ Canvas Background Particles</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 4: CloudGo Weather Checker -->
-                    <article class="project-card" data-category="frontend">
-                        <div class="project-meta">
-                            <span class="project-tag">Web App</span>
-                        </div>
-                        <h3 class="project-title">CloudGo Weather Checker</h3>
-                        <p class="project-desc">A slick utility pulling live, real-time metrics and dynamic temperature maps using third-party Weather APIs.</p>
-                        <div class="project-features">
-                            <span>🌦️ Live Climate Diagnostics</span>
-                            <span>🔍 Instant City Lookup Engine</span>
-                            <span>💎 Neon Glassmorphic Display Cards</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Weather API</span>
+                            <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                     </article>
 
                     <!-- Project 5: ID Card Generator -->
                     <article class="project-card" data-category="frontend">
                         <div class="project-meta">
-                            <span class="project-tag">Interactive Utility</span>
+                            <span class="project-tag">Web Utility</span>
                         </div>
-                        <h3 class="project-title">Dynamic ID Card Generator</h3>
-                        <p class="project-desc">An online tool formatting user input details and avatars into printable, high-fidelity corporate or school ID cards.</p>
+                        <h3 class="project-title">Dynamic ID Creator</h3>
+                        <p class="project-desc">A browser-based creator tool that formats custom details, captures user-provided avatars, and prints standard-size identity layouts.</p>
                         <div class="project-features">
-                            <span>🖨️ Clean Printable Layout Output</span>
-                            <span>🖼️ Dynamic Local Canvas Preview</span>
-                            <span>⚡ Interactive Details Form</span>
+                            <span>🖨️ Clean print layout margins</span>
+                            <span>🖼️ Local canvas preview handling</span>
+                            <span>⚡ Interactive configuration form</span>
                         </div>
                         <div class="project-tech">
                             <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                         </div>
                     </article>
 
-                    <!-- Project 6: Restaurant Menu Website -->
+                    <!-- Project 6: Developer Portfolio -->
                     <article class="project-card" data-category="frontend">
                         <div class="project-meta">
-                            <span class="project-tag">Web Layout</span>
+                            <span class="project-tag">Personal Portfolio</span>
                         </div>
-                        <h3 class="project-title">Restaurant Digital Menu</h3>
-                        <p class="project-desc">A visually appealing responsive menu built for fast-loading, mobile navigation, and easy item categorization.</p>
+                        <h3 class="project-title">Bespoke Developer Portfolio</h3>
+                        <p class="project-desc">This website itself. Crafted with clean semantic structure, custom-tailored theme values, typography pairings, and lightweight local client scripts.</p>
                         <div class="project-features">
-                            <span>🍔 Category Filters (Fast Filter)</span>
-                            <span>🎨 Elegant Dark Restaurant Theme</span>
-                            <span>📱 Mobile-First User Experience</span>
+                            <span>🌗 Dark / Light theme toggles</span>
+                            <span>🌿 Slow ambient mesh visuals</span>
+                            <span>📈 GitHub contribution simulation</span>
                         </div>
                         <div class="project-tech">
-                            <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span>
+                            <span>HTML5</span><span>CSS3</span><span>Vanilla JavaScript</span>
                         </div>
                     </article>
 
-                    <!-- Project 7: Mini Shopping Cart -->
-                    <article class="project-card" data-category="frontend">
-                        <div class="project-meta">
-                            <span class="project-tag">DOM Engineering</span>
-                        </div>
-                        <h3 class="project-title">Mini Shopping Cart System</h3>
-                        <p class="project-desc">A client-side cart mechanics demonstration emphasizing high-speed state change without page reloads.</p>
-                        <div class="project-features">
-                            <span>➕ Dynamic Add & Remove Nodes</span>
-                            <span>📊 Real-Time Sum & Item Counting</span>
-                            <span>🛠️ Local DOM State Operations</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 8: Digital Clock -->
+                    <!-- Project 7: Desktop Contact Book -->
                     <article class="project-card" data-category="desktop">
                         <div class="project-meta">
-                            <span class="project-tag">Desktop GUI</span>
+                            <span class="project-tag">Python Desktop App</span>
                         </div>
-                        <h3 class="project-title">Python Digital Clock</h3>
-                        <p class="project-desc">A responsive desktop widget with fluid time updates, custom window bounds, and styling customization options.</p>
+                        <h3 class="project-title">GUI Contact Management</h3>
+                        <p class="project-desc">A desktop directory application that performs database operations using Python. Saves and loads database states securely to disk.</p>
                         <div class="project-features">
-                            <span>⏰ Real-Time Clock Loop Thread</span>
-                            <span>🎨 Tkinter Canvas Visual Rendering</span>
-                            <span>🖥️ Custom Window Styling Controls</span>
+                            <span>💾 Binary/text file handling</span>
+                            <span>🔍 Instant search indexing</span>
+                            <span>🖥️ Clean Tkinter graphical controls</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python 3</span><span>Tkinter</span><span>File Persistence</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 8: Desktop Calculator Tool -->
+                    <article class="project-card" data-category="desktop">
+                        <div class="project-meta">
+                            <span class="project-tag">Python Desktop App</span>
+                        </div>
+                        <h3 class="project-title">Interactive Desktop Calculator</h3>
+                        <p class="project-desc">A GUI desktop calculation utility built using Python. Includes division by zero handling, responsive grid styling, and calculation logging.</p>
+                        <div class="project-features">
+                            <span>🧮 Complete calculations loop</span>
+                            <span>🎹 Fully interactive layout grid</span>
+                            <span>⚠️ Active operation error traps</span>
                         </div>
                         <div class="project-tech">
                             <span>Python 3</span><span>Tkinter GUI</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 9: Calculator Application -->
-                    <article class="project-card" data-category="desktop">
-                        <div class="project-meta">
-                            <span class="project-tag">Desktop GUI</span>
-                        </div>
-                        <h3 class="project-title">Desktop Calculator Tool</h3>
-                        <p class="project-desc">A utility designed using Python, handling advanced operations, keyboard triggers, and calculation logging.</p>
-                        <div class="project-features">
-                            <span>🧮 Comprehensive Arithmetic Engine</span>
-                            <span>⚠️ Active Division-By-Zero Error Traps</span>
-                            <span>🎹 Fully Interactive Button UI Grid</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python 3</span><span>Tkinter GUI</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 10: Contact Log Management -->
-                    <article class="project-card" data-category="desktop">
-                        <div class="project-meta">
-                            <span class="project-tag">Desktop Tool</span>
-                        </div>
-                        <h3 class="project-title">Desktop Contact Book System</h3>
-                        <p class="project-desc">A desktop system with binary and text file structures storing, searching, and managing contact records.</p>
-                        <div class="project-features">
-                            <span>💾 Secure File Handling Persistence</span>
-                            <span>🔍 Instant Name & Email Query Engine</span>
-                            <span>⚙️ Comprehensive CRUD Functionality</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python 3</span><span>File Persistence</span>
-                        </div>
-                    </article>
-
-                    <!-- Project 11: Student Marks Tracker -->
-                    <article class="project-card" data-category="desktop">
-                        <div class="project-meta">
-                            <span class="project-tag">Desktop Tool</span>
-                        </div>
-                        <h3 class="project-title">Student Marks & Record Tracker</h3>
-                        <p class="project-desc">A calculations-oriented command-line desktop application logging and analyzing academic records.</p>
-                        <div class="project-features">
-                            <span>📊 GPA & Grade Calculator Rules</span>
-                            <span>📁 File-Based Record Archiving</span>
-                            <span>📈 Statistical Score Analytics</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python 3</span><span>File IO</span>
                         </div>
                     </article>
                 </div>
@@ -659,16 +568,15 @@
         <section id="education" class="education-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">Academics</span>
-                    <h2 class="section-title">Education Timeline</h2>
+                    <span class="subtitle">academics</span>
+                    <h2 class="section-title">Education</h2>
                     <div class="title-underline"></div>
                 </div>
 
                 <div class="timeline-container">
-                    <!-- Timeline Item -->
                     <div class="timeline-item">
                         <div class="timeline-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
                         </div>
                         <div class="timeline-content glass-card">
                             <div class="timeline-header-block">
@@ -676,27 +584,53 @@
                                     <span class="timeline-date">2023 - Present</span>
                                     <h3 class="timeline-degree">Bachelor of Computer Applications (BCA)</h3>
                                 </div>
-                                <span class="timeline-status">Active Student</span>
+                                <span class="timeline-status">Active</span>
                             </div>
-                            <p class="timeline-school">Tribhuvan University Affiliated College, Nepal</p>
+                            <p class="timeline-school">Tribhuvan University, Nepal</p>
                             <p class="timeline-text">
-                                Currently pursuing a Bachelor's degree in Computer Applications, focusing on system designs, algorithms, web platforms, databases, and application delivery workflows.
+                                Currently completing core coursework in systems analysis, relational database design, data structures, software engineering workflows, and web technologies.
                             </p>
                             <div class="semester-tracker">
                                 <span class="sem-label">Current Phase:</span>
                                 <span class="sem-val">5th Semester</span>
                             </div>
                             
-                            <h4 class="subjects-title">Key Academic Coverage:</h4>
+                            <h4 class="subjects-title">Core Academic Courses:</h4>
                             <div class="timeline-subjects">
-                                <span class="subject-chip" title="OOP practices using Java classes, packages, interfaces, and multithreading">OOP in Java</span>
-                                <span class="subject-chip" title="Hypertext markup, cascade layouts, DOM structures, and dynamic web solutions">Web Technologies</span>
-                                <span class="subject-chip" title="Relational designs, normalization rules, and high-performance SQL indexing">DBMS</span>
-                                <span class="subject-chip" title="Stack operations, linear and non-linear memory maps, queueing, and trees">Data Structures (DSA)</span>
-                                <span class="subject-chip" title="Comprehensive system flow design, entity relationships, and architectural reviews">System Analysis (SAD)</span>
-                                <span class="subject-chip" title="Waterfall & agile processes, engineering principles, quality control plans">Software Engineering</span>
-                                <span class="subject-chip" title="Transactional platforms, security configurations, digital logistics systems">E-Commerce</span>
-                                <span class="subject-chip" title="Decision systems, metrics analysis, corporate information hierarchies">MIS</span>
+                                <span class="subject-chip" title="OOP principles using Java classes and data structures">OOP in Java</span>
+                                <span class="subject-chip" title="Hypertext markup, layout designs, and client-side scripting">Web Tech</span>
+                                <span class="subject-chip" title="Relational database schemas, normalization, and SQL optimization">DBMS</span>
+                                <span class="subject-chip" title="Memory organization, sorting, and search algorithms">DSA</span>
+                                <span class="subject-chip" title="System layouts, data flow diagrams, and architectural reviews">System Analysis (SAD)</span>
+                                <span class="subject-chip" title="Software lifecycles, specifications, and development processes">Software Eng</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2: Hami Rijal Group -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header-block">
+                                <div>
+                                    <span class="timeline-date">2024 - Present</span>
+                                    <h3 class="timeline-degree">Founder & Organizer</h3>
+                                </div>
+                                <span class="timeline-status" style="background-color: rgba(var(--color-primary-rgb), 0.05); border-color: var(--border-color-glow); color: var(--color-primary);">Community Initiative</span>
+                            </div>
+                            <p class="timeline-school">Hami Rijal Group | Kirtipur, Nepal</p>
+                            <p class="timeline-text">
+                                Formed and led a local youth community volunteering group. Orchestrated projects to construct and restore community temples, and organized local sanitation and environmental hygiene awareness drives.
+                            </p>
+                            
+                            <h4 class="subjects-title">Core Initiatives:</h4>
+                            <div class="timeline-subjects">
+                                <span class="subject-chip" title="Restoring and building local temple structures">Heritage Preservation</span>
+                                <span class="subject-chip" title="Leading community cleanliness drives and health campaigns">Environmental Sanitation</span>
+                                <span class="subject-chip" title="Organizing local youth volunteers for community teamwork">Youth Leadership</span>
+                                <span class="subject-chip" title="Improving local environment to boost residents' mental well-being">Morale & Mental Vitals</span>
                             </div>
                         </div>
                     </div>
@@ -708,8 +642,8 @@
         <section id="github" class="github-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">repo_insights</span>
-                    <h2 class="section-title">GitHub Integration</h2>
+                    <span class="subtitle">repositories</span>
+                    <h2 class="section-title">GitHub Activity</h2>
                     <div class="title-underline"></div>
                 </div>
 
@@ -725,19 +659,18 @@
                             </div>
                         </div>
                         <a href="https://github.com/supreem121" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
-                            <span>Visit GitHub Profile</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            <span>Open Profile</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                         </a>
                     </div>
 
                     <!-- Git Contribution Graph Simulation -->
                     <div class="git-contrib-section">
                         <div class="contrib-header">
-                            <h4>486 Contributions in the past year</h4>
-                            <span class="contrib-range">Jun 2025 - Present</span>
+                            <h4>Recent Contributions</h4>
+                            <span class="contrib-range">Past Year Activity</span>
                         </div>
                         <div class="contrib-graph-wrapper">
-                            <!-- Simulated Grid of commit contribution dots generated via script.js -->
                             <div class="contrib-grid" id="contribGrid"></div>
                         </div>
                         <div class="contrib-legend">
@@ -755,7 +688,7 @@
                     <div class="git-details-row">
                         <!-- Stats Card -->
                         <div class="git-stats-card">
-                            <h4>Profile Activity Statistics</h4>
+                            <h4>Overview Statistics</h4>
                             <div class="git-stats-grid">
                                 <div class="git-stat-box">
                                     <span class="stat-num">24</span>
@@ -775,13 +708,13 @@
                                 </div>
                             </div>
                             <div class="lang-doughnut-sim">
-                                <h5>Primary Languages Distributed</h5>
+                                <h5>Language Distribution</h5>
                                 <div class="bar-lang-tracker">
-                                    <div class="lang-segment segment-html" style="width: 25%" data-lang="HTML (25%)"></div>
-                                    <div class="lang-segment segment-css" style="width: 20%" data-lang="CSS (20%)"></div>
-                                    <div class="lang-segment segment-js" style="width: 25%" data-lang="JS (25%)"></div>
-                                    <div class="lang-segment segment-php" style="width: 15%" data-lang="PHP (15%)"></div>
-                                    <div class="lang-segment segment-py" style="width: 15%" data-lang="Python (15%)"></div>
+                                    <div class="lang-segment segment-html" style="width: 25%" data-lang="HTML"></div>
+                                    <div class="lang-segment segment-css" style="width: 20%" data-lang="CSS"></div>
+                                    <div class="lang-segment segment-js" style="width: 25%" data-lang="JS"></div>
+                                    <div class="lang-segment segment-php" style="width: 15%" data-lang="PHP"></div>
+                                    <div class="lang-segment segment-py" style="width: 15%" data-lang="Python"></div>
                                 </div>
                                 <div class="bar-lang-labels">
                                     <span><span class="dot-col d-html"></span>HTML</span>
@@ -799,27 +732,27 @@
                             <div class="git-repo-item">
                                 <div class="repo-meta-top">
                                     <span class="repo-git-icon">&#x1F4C1;</span>
-                                    <a href="https://github.com/supreem121/FurniShop" target="_blank" rel="noopener noreferrer" class="repo-item-link">FurniShop</a>
+                                    <a href="https://github.com/supreem121/cloude-go" target="_blank" rel="noopener noreferrer" class="repo-item-link">cloude-go</a>
                                     <span class="repo-badge">Public</span>
                                 </div>
-                                <p class="repo-desc">BCA Academic furniture sales and user login engine leveraging native PHP session structures and SQL storage views.</p>
+                                <p class="repo-desc">Concurrent server monitor and vitals metrics api built in Go. Structured package layout and console reporting.</p>
                                 <div class="repo-footer">
-                                    <span><span class="dot-col d-php"></span>PHP</span>
-                                    <span>⭐ 28</span>
-                                    <span>🍴 12</span>
+                                    <span><span class="dot-col d-py"></span>Go</span>
+                                    <span>⭐ 18</span>
+                                    <span>🍴 2</span>
                                 </div>
                             </div>
                             <div class="git-repo-item">
                                 <div class="repo-meta-top">
                                     <span class="repo-git-icon">&#x1F4C1;</span>
-                                    <a href="https://github.com/supreem121/CloudGo-Weather" target="_blank" rel="noopener noreferrer" class="repo-item-link">CloudGo-Weather</a>
+                                    <a href="https://github.com/supreem121/FurniShop" target="_blank" rel="noopener noreferrer" class="repo-item-link">FurniShop</a>
                                     <span class="repo-badge">Public</span>
                                 </div>
-                                <p class="repo-desc">Weather diagnostics dashboard gathering stats dynamically via JavaScript API feeds. Super fast response timing.</p>
+                                <p class="repo-desc">Academic furniture database project. Handles customer sessions, item queries, and database logs with native PHP.</p>
                                 <div class="repo-footer">
-                                    <span><span class="dot-col d-js"></span>JavaScript</span>
-                                    <span>⭐ 14</span>
-                                    <span>🍴 4</span>
+                                    <span><span class="dot-col d-php"></span>PHP</span>
+                                    <span>⭐ 28</span>
+                                    <span>🍴 12</span>
                                 </div>
                             </div>
                         </div>
@@ -832,23 +765,23 @@
         <section id="contact" class="contact-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">get_in_touch</span>
-                    <h2 class="section-title">Connect With Me</h2>
+                    <span class="subtitle">connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
                     <div class="title-underline"></div>
                 </div>
 
                 <div class="contact-grid">
-                    <!-- Contact Information Cards -->
+                    <!-- Contact Info -->
                     <div class="contact-info-panel">
-                        <h3>Let's Collaborate!</h3>
+                        <h3>Let's talk.</h3>
                         <p class="contact-panel-desc">
-                            Have an exciting project idea, a freelance contract opportunity, an academic query, or an internship role? Drop a line, and I will get back to you as soon as possible.
+                            If you'd like to collaborate on a project, talk about coding, or ask about my academic work, feel free to drop a message. I'll get back to you as soon as I can.
                         </p>
                         
                         <div class="contact-list">
                             <div class="contact-item-card">
                                 <div class="contact-icon-shell">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 3a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 3a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 </div>
                                 <div>
                                     <span class="contact-lbl">Location</span>
@@ -857,38 +790,38 @@
                             </div>
                             <div class="contact-item-card">
                                 <div class="contact-icon-shell">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                 </div>
                                 <div>
-                                    <span class="contact-lbl">Email Inquiry</span>
+                                    <span class="contact-lbl">Email</span>
                                     <a href="mailto:rijalsupreem222@gmail.com" class="contact-detail">rijalsupreem222@gmail.com</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Expanded Connect Card Grid -->
-                        <h4 class="social-grid-title">Professional Social Networks</h4>
+                        <!-- Professional Networks -->
+                        <h4 class="social-grid-title">Social Channels</h4>
                         <div class="social-grid">
                             <a href="https://github.com/supreem121" target="_blank" rel="noopener noreferrer" class="social-grid-item git-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 <span>GitHub</span>
                             </a>
                             <a href="https://www.linkedin.com/in/supreem-rijal-742281314" target="_blank" rel="noopener noreferrer" class="social-grid-item link-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                                 <span>LinkedIn</span>
                             </a>
                             <a href="https://www.instagram.com/supreem_rijal0" target="_blank" rel="noopener noreferrer" class="social-grid-item insta-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                                 <span>Instagram</span>
                             </a>
                             <a href="https://www.facebook.com/share/17mCLfoxjn/" target="_blank" rel="noopener noreferrer" class="social-grid-item fb-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                                 <span>Facebook</span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Modern Glassmorphic Form Card -->
+                    <!-- Contact Form Card -->
                     <div class="contact-form-wrapper glass-card">
                         <form id="contactForm" class="contact-form">
                             <div class="form-group">
@@ -913,7 +846,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn">
                                 <span>Send Message</span>
-                                <svg class="send-plane-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                <svg class="send-plane-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                             </button>
                         </form>
                     </div>
@@ -927,10 +860,10 @@
         <div class="container footer-container">
             <div class="footer-left">
                 <a href="#home" class="footer-logo">
-                    <span class="logo-bracket">SR</span><span class="logo-dot">.
+                    <span class="logo-bracket">Supreem</span><span class="logo-dot">.</span>
                 </a>
                 <p class="footer-objective">
-                    Aspiring Full-Stack Developer leveraging software, system analytics, and responsive designs to solve real-world problems.
+                    Developing simple, reliable software solutions while continuing to learn and explore computer applications.
                 </p>
             </div>
             
@@ -956,10 +889,10 @@
         
         <div class="footer-bottom">
             <div class="container footer-bottom-container">
-                <p class="copyright">&copy; 2026 Supreem Rijal. Built with HTML, CSS & Vanilla JS. All rights reserved.</p>
+                <p class="copyright">&copy; 2026 Supreem Rijal. Built with clean HTML, CSS & JavaScript.</p>
                 <a href="#home" class="scroll-top-btn" aria-label="Scroll to top">
                     <span>Back to Top</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                 </a>
             </div>
         </div>
@@ -968,7 +901,7 @@
     <!-- Toast Notification Banner -->
     <div id="toast" class="toast-banner">
         <div class="toast-icon">✓</div>
-        <div class="toast-text" id="toastMessage">Message sent successfully!</div>
+        <div class="toast-text" id="toastMessage">Success</div>
     </div>
 
     <!-- Core Scripts -->
