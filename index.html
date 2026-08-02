@@ -74,16 +74,14 @@
         <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge-glow animate-fade-in">Currently coding in Nepal</div>
+                    <div class="badge-glow animate-fade-in">Based in Kathmandu, Nepal</div>
                     <h1 class="hero-title animate-slide-up">
                         Building software with <span class="highlight">focus and craft.</span>
                     </h1>
-                    
-                    <div class="typewriter-container">
-                        <span class="prefix">I focus on</span>
-                        <span class="typewriter-text" id="typewriter"></span>
-                        <span class="cursor">_</span>
-                    </div>
+
+                    <p class="hero-focus-line animate-fade-in">
+                        Web applications &middot; Backend APIs &middot; Desktop tools
+                    </p>
 
                     <p class="hero-tagline animate-fade-in">
                         Hi, I'm Supreem. I build web applications and desktop tools. Currently studying Computer Applications in Nepal, focusing on writing clean code and understanding how systems work under the hood.
@@ -175,13 +173,13 @@
                     <div class="about-info">
                         <h3>Coding with purpose and curiosity.</h3>
                         <p class="summary-lead">
-                            I am a student developer who enjoys building software that solves day-to-day problems.
+                            I'm a student developer who enjoys building software that solves day-to-day problems.
                         </p>
                         <p class="summary-text">
-                            My coding journey started with automation scripts and desktop tools using Python. That curiosity quickly led me to explore web application development, relational databases, and backend APIs.
+                            I started out writing small automation scripts and desktop tools in Python — mostly to save myself repetitive work. That grew into an interest in web applications, relational databases, and how backend systems actually talk to each other.
                         </p>
                         <p class="summary-text">
-                            Currently in my fifth semester of a Bachelor of Computer Applications (BCA) program, I divide my time between academic system concepts and real-world implementation projects using Go, PHP, and JavaScript. I focus on keeping my code organized, my interfaces intuitive, and my solutions practical.
+                            I'm currently in my fifth semester of a Bachelor of Computer Applications (BCA) program, splitting time between coursework and hands-on projects in Go, PHP, and JavaScript. I care more about code that's easy to reason about six months later than code that looks clever today.
                         </p>
                         
                         <div class="bio-details">
@@ -431,12 +429,7 @@
                             <span class="project-tag">Go / CLI Utility</span>
                         </div>
                         <h3 class="project-title">CLOUDE GO</h3>
-                        <p class="project-desc">A concurrent cloud telemetry and system performance dashboard built in Go. Monitors local system processes and serves statistics through a lightweight local API.</p>
-                        <div class="project-features">
-                            <span>⚡ High-performance concurrency</span>
-                            <span>📊 Local server API reporting</span>
-                            <span>⚙️ Interactive terminal interface</span>
-                        </div>
+                        <p class="project-desc">A system telemetry dashboard written in Go, built to get comfortable with goroutines and channels. It polls local CPU, memory, and process stats concurrently, then serves them through a lightweight local API so I can view live numbers from the terminal or a browser.</p>
                         <div class="project-tech">
                             <span>Go</span><span>Concurrency</span><span>APIs</span><span>CLI</span>
                         </div>
@@ -448,12 +441,7 @@
                             <span class="project-tag">BCA Academic Project</span>
                         </div>
                         <h3 class="project-title">FurniShop Portal</h3>
-                        <p class="project-desc">An academic online storefront project for furniture listings. Implements user session authentication, basic checkout logic, and a dynamic admin management dashboard.</p>
-                        <div class="project-features">
-                            <span>🛒 Shopping cart structure</span>
-                            <span>🔑 Secured user login sessions</span>
-                            <span>📂 MySQL relational structure</span>
-                        </div>
+                        <p class="project-desc">An online furniture storefront built for my BCA coursework. Covers the full flow — session-based login, a shopping cart, checkout logic, and an admin dashboard for managing listings — backed by a MySQL relational schema I designed from scratch.</p>
                         <div class="project-tech">
                             <span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                         </div>
@@ -465,12 +453,7 @@
                             <span class="project-tag">Web Application</span>
                         </div>
                         <h3 class="project-title">Stopwatch & Timer App</h3>
-                        <p class="project-desc">A clean, distraction-free browser productivity application. Supports precise split lap timing, counting down, customizable interval configurations, and local storage state persistence.</p>
-                        <div class="project-features">
-                            <span>⏱️ Accurate lap/split intervals</span>
-                            <span>💾 Settings local storage caching</span>
-                            <span>🌗 Accessible layout interface</span>
-                        </div>
+                        <p class="project-desc">A no-clutter productivity timer for the browser. Handles precise lap splits, countdown intervals, and remembers your last settings between visits using localStorage — built to be fast and distraction-free rather than feature-heavy.</p>
                         <div class="project-tech">
                             <span>HTML5</span><span>CSS3</span><span>Vanilla JavaScript</span>
                         </div>
@@ -482,12 +465,7 @@
                             <span class="project-tag">Client Project</span>
                         </div>
                         <h3 class="project-title">SR Sellers Catalog</h3>
-                        <p class="project-desc">A custom e-commerce product catalog designed for local hardware merchants. Optimized for fast catalog indexing and simple management views.</p>
-                        <div class="project-features">
-                            <span>📂 Inventory organization database</span>
-                            <span>📱 Clean mobile showcase view</span>
-                            <span>⚡ Fast query load times</span>
-                        </div>
+                        <p class="project-desc">A product catalog built for a local hardware merchant who needed a simple way to list and update inventory online. Optimized for fast search on a large item list and a clean, mobile-first browsing view for customers.</p>
                         <div class="project-tech">
                             <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
@@ -499,12 +477,7 @@
                             <span class="project-tag">Web Utility</span>
                         </div>
                         <h3 class="project-title">Dynamic ID Creator</h3>
-                        <p class="project-desc">A browser-based creator tool that formats custom details, captures user-provided avatars, and prints standard-size identity layouts.</p>
-                        <div class="project-features">
-                            <span>🖨️ Clean print layout margins</span>
-                            <span>🖼️ Local canvas preview handling</span>
-                            <span>⚡ Interactive configuration form</span>
-                        </div>
+                        <p class="project-desc">A browser tool that lets you fill in details, upload a photo, and generate a print-ready ID card layout entirely on the canvas — no server round-trip needed. Built this to learn the Canvas API properly.</p>
                         <div class="project-tech">
                             <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                         </div>
@@ -515,13 +488,8 @@
                         <div class="project-meta">
                             <span class="project-tag">Personal Portfolio</span>
                         </div>
-                        <h3 class="project-title">Bespoke Developer Portfolio</h3>
-                        <p class="project-desc">This website itself. Crafted with clean semantic structure, custom-tailored theme values, typography pairings, and lightweight local client scripts.</p>
-                        <div class="project-features">
-                            <span>🌗 Dark / Light theme toggles</span>
-                            <span>🌿 Slow ambient mesh visuals</span>
-                            <span>📈 GitHub contribution simulation</span>
-                        </div>
+                        <h3 class="project-title">This Portfolio</h3>
+                        <p class="project-desc">The site you're looking at right now — hand-built with semantic HTML, a custom dark/light theme system, and lightweight vanilla JS for the interactive bits, without relying on a framework.</p>
                         <div class="project-tech">
                             <span>HTML5</span><span>CSS3</span><span>Vanilla JavaScript</span>
                         </div>
@@ -533,12 +501,7 @@
                             <span class="project-tag">Python Desktop App</span>
                         </div>
                         <h3 class="project-title">GUI Contact Management</h3>
-                        <p class="project-desc">A desktop directory application that performs database operations using Python. Saves and loads database states securely to disk.</p>
-                        <div class="project-features">
-                            <span>💾 Binary/text file handling</span>
-                            <span>🔍 Instant search indexing</span>
-                            <span>🖥️ Clean Tkinter graphical controls</span>
-                        </div>
+                        <p class="project-desc">A desktop contact book built with Tkinter for a systems programming assignment. Reads and writes records to disk, supports instant search as you type, and handles basic data validation.</p>
                         <div class="project-tech">
                             <span>Python 3</span><span>Tkinter</span><span>File Persistence</span>
                         </div>
@@ -550,12 +513,7 @@
                             <span class="project-tag">Python Desktop App</span>
                         </div>
                         <h3 class="project-title">Interactive Desktop Calculator</h3>
-                        <p class="project-desc">A GUI desktop calculation utility built using Python. Includes division by zero handling, responsive grid styling, and calculation logging.</p>
-                        <div class="project-features">
-                            <span>🧮 Complete calculations loop</span>
-                            <span>🎹 Fully interactive layout grid</span>
-                            <span>⚠️ Active operation error traps</span>
-                        </div>
+                        <p class="project-desc">A Tkinter calculator with a responsive grid layout, a running calculation log, and proper error handling for edge cases like division by zero — one of my early projects for getting comfortable with GUI event handling.</p>
                         <div class="project-tech">
                             <span>Python 3</span><span>Tkinter GUI</span>
                         </div>
@@ -707,6 +665,7 @@
                                     <span class="stat-lbl">Open Tasks</span>
                                 </div>
                             </div>
+                            <!-- NOTE (Claude): confirm these numbers are real / wire to live GitHub API — see chat -->
                             <div class="lang-doughnut-sim">
                                 <h5>Language Distribution</h5>
                                 <div class="bar-lang-tracker">
@@ -735,7 +694,7 @@
                                     <a href="https://github.com/supreem121/cloude-go" target="_blank" rel="noopener noreferrer" class="repo-item-link">cloude-go</a>
                                     <span class="repo-badge">Public</span>
                                 </div>
-                                <p class="repo-desc">Concurrent server monitor and vitals metrics api built in Go. Structured package layout and console reporting.</p>
+                                <p class="repo-desc">Concurrent server monitor and vitals metrics API built in Go, with a structured package layout and console reporting.</p>
                                 <div class="repo-footer">
                                     <span><span class="dot-col d-py"></span>Go</span>
                                     <span>⭐ 18</span>
@@ -748,7 +707,7 @@
                                     <a href="https://github.com/supreem121/FurniShop" target="_blank" rel="noopener noreferrer" class="repo-item-link">FurniShop</a>
                                     <span class="repo-badge">Public</span>
                                 </div>
-                                <p class="repo-desc">Academic furniture database project. Handles customer sessions, item queries, and database logs with native PHP.</p>
+                                <p class="repo-desc">Academic furniture storefront project handling customer sessions, item queries, and database logs with native PHP.</p>
                                 <div class="repo-footer">
                                     <span><span class="dot-col d-php"></span>PHP</span>
                                     <span>⭐ 28</span>
@@ -811,11 +770,11 @@
                                 <span>LinkedIn</span>
                             </a>
                             <a href="https://www.instagram.com/supreem_rijal0" target="_blank" rel="noopener noreferrer" class="social-grid-item insta-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                                 <span>Instagram</span>
                             </a>
                             <a href="https://www.facebook.com/share/17mCLfoxjn/" target="_blank" rel="noopener noreferrer" class="social-grid-item fb-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                                 <span>Facebook</span>
                             </a>
                         </div>
